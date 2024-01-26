@@ -1,7 +1,14 @@
-# Custom project from Hilla
+# Hilla AutoCrud with MongoDB
 
-This project can be used as a starting point to create your own Hilla application with Spring Boot.
-It contains all the necessary configuration and some placeholder files to get you started.
+This project uses a custom implementation of `CrudService<T, ID>` to connect a MongoDB database with Hilla's [AutoCrud](https://hilla.dev/docs/react/components/auto-crud) component.
+
+The project requires a local running MongoDB instance, like this:
+
+```shell
+podman run --name mongodb --detach --publish 27017:27017 --env MONGODB_INITDB_ROOT_USERNAME=user --env MONGODB_INITDB_ROOT_PASSWORD=password mongodb/mongodb-community-server:latest
+```
+
+Please check out the corresponding [blog post](https://www.rene-wilby.de/en/blog/hilla-autocrud-mongodb), to find out more about the project, its intention and how to use it.
 
 ## Running the application
 
